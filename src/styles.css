@@ -5,9 +5,11 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
+    
+    
 }
 
 header {
@@ -28,7 +30,9 @@ button {
 }
 
 .project-list {
-    margin-bottom: 20px;
+
+
+
 }
 
 .todo-list {
@@ -37,4 +41,9 @@ button {
 
 .todo-details {
     /* Styles for expanded todo details */
+}
+
+img {
+    width: 50px;
+    height: 50px;
 }
