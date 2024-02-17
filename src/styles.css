@@ -2,12 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+;
 }
 
 .container {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
+    width: 100%;
+    height: 100%;
     
     
 }
@@ -44,6 +47,64 @@ button {
 }
 
 img {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 30px;
 }
+.main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+
+}
+
+.targetprojectsublist {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center; 
+}
+.button-plus {
+   
+    border: none;
+   /* Color del texto */
+    padding: 10px 20px; /* Tamaño del botón */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Quita el subrayado del texto */
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; /* Espacio entre el contenido y el botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    
+    top: 0;
+    width: 100%;
+    
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+
+
