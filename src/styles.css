@@ -106,5 +106,45 @@ img {
     font-weight: bold;
   }
   
+  .modal2 {
+    display: grid;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #f9f9f9; 
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+   width: 400px;
+   grid-template-columns: 1fr 1fr;
+   border: 2px solid black;
+   padding: 20px;
+    
+ }
 
-
+ .close  {
+    grid-column: span 2;
+    justify-self: end;
+  
+  }
+  
+  .pointer {
+     cursor: pointer;
+  }
+  
+  .important {
+    grid-column: span 2;
+  }
+  
+  .date {
+    grid-column: span 2 ; 
+  }
+  
+  
+  .save {
+    justify-self:center;
+    grid-column: span 2 ;
+  }
+  
+  .buttonDiv {
+    margin:0 auto;
+  }
