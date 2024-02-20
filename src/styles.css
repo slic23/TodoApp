@@ -107,7 +107,7 @@ img {
   }
   
   .modal2 {
-    display: grid;
+    display: none;
    position: absolute;
    top: 50%;
    left: 50%;
@@ -118,6 +118,7 @@ img {
    grid-template-columns: 1fr 1fr;
    border: 2px solid black;
    padding: 20px;
+   row-gap: 20px;
     
  }
 
@@ -147,4 +148,9 @@ img {
   
   .buttonDiv {
     margin:0 auto;
+  }
+
+  #subcontainer {
+    display:flex;
+    justify-content: space-between;
   }

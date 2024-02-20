@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    
-    
 </head>
 <body>
     <div class="container">
@@ -14,83 +12,76 @@
             <h1>Simple-TodoApp</h1>
             <button id="new-project-btn">New Project</button>
         </header>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="main">
-
-                <div><label for="">Nombre</label></div>
-                <div><input type="text" name="" id="ProjecName" placeholder="nombre"></div>
-                <div><button id="save">Save</button></div>
-                
-              </div>
-            </div>
-          </div>
         <hr>
-
         <div class="main">
-            <div id="project-list" class="project-list ">
+            <div id="project-list" class="project-list">
                 <div>
-                  <select>
-                      <option value="opcion1">Default Project</option>
-                  </select>
+                    <select>
+                        <option value="opcion1">Default Project</option>
+                    </select>
                 </div>
-                  
-                  <!-- Project items will be dynamically added here -->
-              </div>
-              <div class="targetprojectsublist">
+                <!-- Project items will be dynamically added here -->
+            </div>
+            <div class="targetprojectsublist">
                 <div id="todo-list" class="todo-list">
-                    <h1>default project</h1>
+                    <h1 class="changeIt">default project</h1>
                     <div id="todosWANTtoAdd"></div>
-                    <button class="button-plus">+</button>
-
-                  <div class="modal2">
-
-                    <div class="close"> <button>close</button></div>
-                    <div class="title">
-                      <div><label for="">Title</label></div>
-                      <div><input type="text" name="titulo" id=""></div>
-                    </div>
-
-                     <div class="description">
-                      <div><label for="">Description</label></div>
-                      <div><input type="text" name="" id=""></div>
-                     </div>
-
-                     <div class="important">
-                      <div class="grid-prior">
-                        <label class="container">Low
-                          <input type="radio" checked="checked" name="radio">
-                          <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Medium
-                          <input type="radio" name="radio">
-                          <span class="checkmark"></span>
-                        </label>
-                        <label class="container">High
-                          <input type="radio" name="radio">
-                          <span class="checkmark"></span>
-                        </label>  
-                        </div>
-                        
-                     </div>
-
-                     <div class="date">
-                      <div><label for="">Date</label></div>
-                      <div><input type="date" name="" id=""></div>
-                      
-                     </div>
-
-                     <div><button type="button">Save</button></div>
-                  </div>
+                    <button class="button-plus" id="buton">+</button>
                     <!-- Todo items will be dynamically added here -->
                 </div>
                 <div id="todo-details" class="todo-details">
                     <!-- Todo details will be displayed here when expanded -->
                 </div>
-              </div>
+            </div>
         </div>
-       <script type="module" src="index.js"></script>
     </div>
+
+    <!-- Modal for New Project -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="main">
+                <div><label for="">Nombre</label></div>
+                <div><input type="text" name="" id="ProjecName" placeholder="nombre"></div>
+                <div><button id="save">Save</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for New Todo -->
+    <div class="modal2">
+        <div class="close"><button class="pointer">close</button></div>
+        <div class="title">
+            <div><label for="">Title</label></div>
+            <div><input type="text" name="titulo" id="" class="titulo"></div>
+        </div>
+        <div class="description">
+            <div><label for="">Description</label></div>
+            <div><textarea rows="4" cols="20"></textarea></div>
+        </div>
+        <div class="important">
+            <div class="grid-prior">
+                <label class="container">Low
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Medium
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">High
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                </label>  
+            </div>
+        </div>
+        <div class="date">
+            <div><label for="">Date</label></div>
+            <div><input type="date" name="" id="" class="fecha"></div>
+        </div>
+        <div class="save"><button type="button" class="saving">Save</button></div>
+    </div>
+
+    <script type="module" src="index.js"></script>
 </body>
 </html>
