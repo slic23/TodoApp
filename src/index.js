@@ -1,5 +1,5 @@
+import "./styles.css"
 import { modals } from "./modals.js";
-
 import { experimento } from "./howItworks.js";
 
 function mando(radios){
