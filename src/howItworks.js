@@ -1,63 +1,62 @@
-const todoApp = function(title, description, dueDate, priority ) {
-    const app = {
-        projects: JSON.parse(localStorage.getItem('userData'))|| [],
-        local : function(){
-            localStorage.setItem("userData",JSON.stringify(this.projects))
+const experimento = function(){
+    const expo = {
+        projects: JSON.parse(localStorage.getItem('meta')) || [],
+
+        local: function(){
+            localStorage.setItem('meta', JSON.stringify(this.projects));
+        },
+
+        newProject: function(name){
+            const nuevoProj = {
+                projectName: name, 
+                todos: []
+            };
+
+            this.projects.push(nuevoProj);
+            this.local();
+        },
+
+        deleteTask: function(name, title) {
             
-        },
-        todo: [],
-        projectName: title,
-        title: title,
-        Description: description,
-        DueDate: dueDate,
-        Priority: priority,
-        setTodo : function(){
-            this.todo.push(this.title,this.Description,this.DueDate,this.Priority)
-            return this.todo 
-        },
-
-        deleteTodo: function(todoName){
-            for(let x = 0 ; x < this.projects.length ; x++){
-                const project = this.projects[x];
-                for(let j = 0 ; j < project.todo.length; j++){
-                    const todo = project.todo[j];
-                    if(todo.title === todoName){
-
-                        project.todo.splice(j, 1);
-                        
-                        this.local();
-                        return;
-                    }
+                this.projects.forEach(project => {
+                if (project.projectName === name) {
+                    project.todos = project.todos.filter(task => task.title !== title);
                 }
-            }
+            });
+            this.local(); // Guardar los cambios en el almacenamiento local
         },
-
-        setProject: function(){
-            this.projects.push({
-               name:this.projectName,
-               todo: [this.title,this.Description,this.DueDate,this.Priority]
-            })
-
-            this.local()
-            return this.projects
-        } , 
+        
+        setTodo: function(name, title, description, priority, date){
+            const obj = this.projects.find(project => project.projectName === name);
+            const todo = {
+                title: title,
+                description: description,
+                priority: priority,
+                date: date
+            };
+            obj.todos.push(todo);
+            this.local();
+        },
 
         deleteProject: function(nameProj){
-            for(let i = 0 ; i < this.projects.length ; i++){
-               if  (this.projects[i].name  == nameProj ){
-                    this.projects.splice(i,1)
-                    break
-               }
+            if (nameProj === "Project Default") {
+                return this.projects;
             }
-            this.local()
-            return this.projects
-         
-        }
-
-
-
-        
+            this.projects = this.projects.filter(proj => proj.projectName !== nameProj);
+            this.local();
+            return this.projects;
+        } 
     };
     
-    return app;
+    // Agregar el proyecto predeterminado si no hay proyectos almacenados
+    if (expo.projects.length === 0) {
+        expo.newProject("Project Default");
+    }
+    
+    return expo;
 };
+
+
+export {
+    experimento
+}

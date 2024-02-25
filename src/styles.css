@@ -1,156 +1,171 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-    width: 100%;
-    height: 100%;
-    
-    
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-h1 {
-    margin: 0;
-}
-
-button {
-    padding: 8px 16px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.project-list {
-
-
-
-}
-
-.todo-list {
-    margin-bottom: 20px;
-}
-
-.todo-details {
-    /* Styles for expanded todo details */
-}
-
-img {
-    width: 20px;
-    height: 30px;
-}
-.main {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-
-}
-
-.targetprojectsublist {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-    text-align: center; 
-}
-.button-plus {
-   
-    border: none;
-   /* Color del texto */
-    padding: 10px 20px; /* Tamaño del botón */
-    text-align: center; /* Centra el texto */
-    text-decoration: none; /* Quita el subrayado del texto */
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px; /* Espacio entre el contenido y el botón */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer;
-}
-
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    
-    top: 0;
-    width: 100%;
-    
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+.modal2 {
+  display: none;
+      border: 2px solid #4CAF50;
+      width: 300px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f2f2f2;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
   }
-
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  
+  #tareas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin: 20px auto;
+      gap: 20px;
   }
-
-
+  
+  #tareas .atributes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      background-color: #fff;
+  }
+  
+  #tareas .atributes div {
+      margin-bottom: 10px;
+  }
+  
+  .forms {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: 20px;
+  }
+  
+  .alert {
+      padding: 15px;
+      background-color: #f44336;
+      color: white;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      display: none; /* Por defecto oculto */
+  }
+  
+  /* Estilos para el botón de cerrar */
+  .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+      color: black;
+  }
+  
+  header {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+  }
+  
+  header h1 {
+      color: #4CAF50;
+  }
+  
+  #new-project-btn {
+      width: 100px;
+      height: 100px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  #new-project-btn:hover {
+      background-color: #45a049;
+  }
+  
   .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
   }
   
-  .modal2 {
-    display: none;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background-color: #f9f9f9; 
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-   width: 400px;
-   grid-template-columns: 1fr 1fr;
-   border: 2px solid black;
-   padding: 20px;
-   row-gap: 20px;
-    
- }
-
- .close  {
-    grid-column: span 2;
-    justify-self: end;
-  
+  #task {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
   }
   
-  .pointer {
-     cursor: pointer;
+  #clave {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
   }
   
-  .important {
-    grid-column: span 2;
+  #clave:hover {
+      background-color: #45a049;
   }
   
-  .date {
-    grid-column: span 2 ; 
+  .tituloDiv {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+  }
+  
+  .atributes {
+      display: grid;
+      grid-template-columns: 1fr;
+      border-left: 2px solid #4CAF50;
+      width: 100%;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      margin-bottom: 20px;
+  }
+  
+  .atributes:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
   
-  .save {
-    justify-self:center;
-    grid-column: span 2 ;
+  
+  
+  .Navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
   }
   
-  .buttonDiv {
-    margin:0 auto;
+  .Navbar select,
+  .Navbar input[type="text"],
+  .Navbar button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      margin-right: 10px;
   }
-
-  #subcontainer {
-    display:flex;
-    justify-content: space-between;
+  
+  .Navbar select:hover,
+  .Navbar input[type="text"]:hover,
+  .Navbar button:hover {
+      background-color: #45a049;
   }
